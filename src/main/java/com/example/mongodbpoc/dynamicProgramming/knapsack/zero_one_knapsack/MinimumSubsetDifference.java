@@ -25,7 +25,6 @@ public class MinimumSubsetDifference {
                     t[i][j] = false;
                 if (j == 0)
                     t[j][j] = true;
-
             }
         }
         for (int i = 1; i <= arr.length; i++) {

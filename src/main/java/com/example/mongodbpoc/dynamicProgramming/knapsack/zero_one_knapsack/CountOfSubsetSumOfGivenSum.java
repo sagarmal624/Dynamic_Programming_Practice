@@ -2,8 +2,8 @@ package com.example.mongodbpoc.dynamicProgramming.knapsack.zero_one_knapsack;
 
 public class CountOfSubsetSumOfGivenSum {
     public static void main(String[] args) {
-        int arr[] = {1, 5, 5, 11, 2, 8, 2};
-        int size = count(arr, 11);
+        int arr[] = {1, 2, 3, 3};
+        int size = count(arr, 6);
         System.out.println(size);
     }
 

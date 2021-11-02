@@ -9,13 +9,13 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.context.annotation.RequestScope;
 
+import javax.annotation.PostConstruct;
+import java.util.LinkedHashMap;
+
 @SpringBootApplication
 
 public class MongoDbPocApplication {
-
     public static void main(String[] args) {
         ApplicationContext applicationContext = SpringApplication.run(MongoDbPocApplication.class, args);
-
-
     }
 }
