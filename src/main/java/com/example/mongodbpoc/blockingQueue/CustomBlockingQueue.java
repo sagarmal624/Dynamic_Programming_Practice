@@ -1,5 +1,6 @@
 package com.example.mongodbpoc.blockingQueue;
 
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -20,7 +21,6 @@ public class CustomBlockingQueue {
         lock.lock();
         try {
             while (count == array.length) {
-                // Queue is full, producers need to wait
                 produceCond.await();
             }
             array[putIndex] = x;
@@ -29,7 +29,6 @@ public class CustomBlockingQueue {
             if (putIndex == array.length) {
                 putIndex = 0;
             }
-            // Increment the count for the array
             ++count;
             consumeCond.signal();
         } finally {
@@ -41,7 +40,6 @@ public class CustomBlockingQueue {
         lock.lock();
         try {
             while (count == 0) {
-                // Queue is empty, consumers need to wait
                 consumeCond.await();
             }
             Object x = array[takeIndex];
@@ -50,9 +48,7 @@ public class CustomBlockingQueue {
             if (takeIndex == array.length) {
                 takeIndex = 0;
             }
-            // reduce the count for the array
             --count;
-            // send signal producer
             produceCond.signal();
             return x;
         } finally {

@@ -45,8 +45,7 @@ public class BinaryTree {
 
         if (isSame(T, S))
             return true;
-        return isSubtree(T.left, S)
-                || isSubtree(T.right, S);
+        return isSubtree(T.left, S)|| isSubtree(T.right, S);
     }
 
     public void insert(int data) {

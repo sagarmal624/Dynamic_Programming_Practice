@@ -42,9 +42,9 @@ public class BinaryTree {
                 return true;
         }
         if (root.left != null)
-            isSibling(root.left, m, n);
+            return isSibling(root.left, m, n);
         if (root.right != null)
-            isSibling(root.right, m, n);
+            return isSibling(root.right, m, n);
         return true;
     }
 
