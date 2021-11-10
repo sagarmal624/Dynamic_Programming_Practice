@@ -1,6 +1,7 @@
 package com.example.mongodbpoc.dynamicProgramming.LongestCommonSubsequence;
 
 public class MinimumNumOfInsertAndDeletion {
+
     public static void main(String[] args) {
         String s1 = "heap";
         String s2 = "pea";

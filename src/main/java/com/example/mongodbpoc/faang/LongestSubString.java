@@ -1,11 +1,33 @@
 package com.example.mongodbpoc.faang;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class LongestSubString {
     public static void main(String[] args) {
-        System.out.println(optimized("abcdcabd"));
+        bestSolution("abcdcabd");
+    }
+
+    public static void bestSolution(String str) {
+        int maxLen = Integer.MIN_VALUE;
+        Map<Character, Integer> map = new LinkedHashMap<>();
+        String longestString = null;
+        for (int i = 0; i < str.length(); i++) {
+            if (map.containsKey(str.charAt(i))) {
+                i = str.charAt(i);
+                map.clear();
+            } else {
+                map.put(str.charAt(i), i);
+            }
+
+            if (map.size() > maxLen) {
+                maxLen = map.size();
+                longestString = map.keySet().toString();
+            }
+        }
+        System.out.println(longestString);
+        System.out.println(maxLen);
     }
 
     public static int optimized(String str) {

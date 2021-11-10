@@ -22,6 +22,25 @@ public class SlidingWindowExample {
         System.out.println(min);
     }
 
+    public static int largestSubStringWithoutRepeatingChars(String str) {
+        int i = 0, j = 0, max = Integer.MIN_VALUE;
+        Set<Character> set = new HashSet<>();
+        while (j < str.length()) {
+            if (set.add(str.charAt(j))) {
+                max = Math.max(max, j - i + 1);
+                j++;
+            } else {
+                while (str.charAt(i) != str.charAt(j)) {
+                    set.remove(str.charAt(i));
+                    i++;
+                }
+                set.remove(str.charAt(j));
+                i++;
+            }
+        }
+        return max;
+    }
+
     // need to fix one bug .. not working properly
     public static void longestSubStringWithKUniqueChar(char arr[], int k) {
 
@@ -198,6 +217,6 @@ public class SlidingWindowExample {
 
     public static void main(String[] args) {
         int arr[] = {5, 8, -14, 2, 4, 12};
-        longestSubStringWithKUniqueChar("aabbcc".toCharArray(), 1);
+        System.out.println(largestSubStringWithoutRepeatingChars("aabbcc"));
     }
 }

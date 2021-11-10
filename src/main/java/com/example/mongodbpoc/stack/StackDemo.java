@@ -24,7 +24,6 @@ public class StackDemo {
         Stack<Integer> stack = new Stack<>();
         int span[] = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
-
             while (stack.size() > 0 && stack.peek() < arr[i]) {
                 stack.pop();
             }

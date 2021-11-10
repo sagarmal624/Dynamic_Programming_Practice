@@ -33,7 +33,7 @@ public class LinkedList {
         }
     }
 
-    public void deleteMid(int index) {
+        public void deleteMid(int index) {
         if (root != null) {
             int counter = 1;
             Node prev = root, temp = root;
