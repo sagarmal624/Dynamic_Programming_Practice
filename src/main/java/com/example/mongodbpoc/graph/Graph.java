@@ -1,5 +1,6 @@
 package com.example.mongodbpoc.graph;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -31,10 +32,11 @@ public class Graph {
     void DFSUtil(int v, boolean visited[]) {
         visited[v] = true;
         System.out.print(v + " ");
-        List<Integer> lst = adj[v];
-        for (Integer num : lst) {
-            if (!visited[num])
-                DFSUtil(v, visited);
+        Iterator<Integer> i = adj[v].listIterator();
+        while (i.hasNext()) {
+            int n = i.next();
+            if (!visited[n])
+                DFSUtil(n, visited);
         }
     }
 
@@ -60,7 +62,6 @@ public class Graph {
 
     public static void main(String args[]) {
         Graph g = new Graph(4);
-
         g.addEdge(0, 1);
         g.addEdge(0, 2);
         g.addEdge(1, 2);
@@ -72,5 +73,7 @@ public class Graph {
                 "(starting from vertex 2)");
 
         g.bfs(2);
+        System.out.println();
+        g.dfs(2);
     }
 }
