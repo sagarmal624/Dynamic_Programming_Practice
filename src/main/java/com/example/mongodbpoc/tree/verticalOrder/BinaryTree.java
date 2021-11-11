@@ -160,7 +160,6 @@ public class BinaryTree {
                 if (temp.right != null)
                     queue.offer(temp.right);
             } else {
-
                 System.out.println(list.get(list.size() - 1));
                 list = new ArrayList<>();
                 if (!queue.isEmpty())
