@@ -65,7 +65,6 @@ public class ZeroOneKnapsack {
             profit[i] = -1;
         }
         int maxProfit = topDown(v, w, 50, 3);
-
         System.out.println(maxProfit);
 
     }

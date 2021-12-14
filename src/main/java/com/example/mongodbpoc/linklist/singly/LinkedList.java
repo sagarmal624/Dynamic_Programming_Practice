@@ -413,6 +413,7 @@ public class LinkedList {
         while (current != null) {
 
             temp.next = current;
+            temp=temp.next;
             current = current.next;
         }
         root = prev;

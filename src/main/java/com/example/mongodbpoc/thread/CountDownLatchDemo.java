@@ -19,20 +19,15 @@ class DevTeam extends Thread {
             ex.printStackTrace();
         } finally {
             System.out.println("finished task by " + Thread.currentThread().getName());
-
             countDownLatch.countDown();
         }
     }
 }
 
 class QATeam extends Thread {
-
-
     QATeam(String name) {
         super(name);
-
     }
-
     @Override
     public void run() {
         try {
@@ -42,7 +37,6 @@ class QATeam extends Thread {
             ex.printStackTrace();
         } finally {
             System.out.println("finished Validation by " + Thread.currentThread().getName());
-
         }
     }
 }
@@ -57,7 +51,5 @@ public class CountDownLatchDemo {
         countDownLatch.await();
         QATeam qaTeam = new QATeam("QA Team");
         qaTeam.start();
-
-
     }
 }

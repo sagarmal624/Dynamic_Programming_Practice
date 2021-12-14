@@ -1,6 +1,5 @@
 package com.example.mongodbpoc.blockingQueue;
 
-import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

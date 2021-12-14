@@ -227,9 +227,8 @@ public class BinarySeachExample {
     }
 
     public static void main(String[] args) {
-        int arr[] = {11, 12, 15, 18, 2, 5, 6, 8};
-
-        System.out.println(searchElementInRoated(arr, 6));
+        int arr[] = {0, 1, 2, 3, 4};
+        System.out.println(findSmallestMissingNum(arr));
 
     }
 }

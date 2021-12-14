@@ -75,7 +75,7 @@ public class BinaryTree {
         Queue<Node> queue = new LinkedList<>();
         root.hd = 0;
         queue.offer(root);
-        HashMap<Integer, List<Integer>> map = new HashMap<>();
+        HashMap<Integer, List<Integer>> map = new LinkedHashMap<>();
         while (!queue.isEmpty()) {
             Node temp = queue.poll();
             if (temp != null) {
