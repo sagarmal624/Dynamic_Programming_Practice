@@ -1,6 +1,7 @@
 package com.example.mongodbpoc.binarysearch;
 
 public class BinarySeachExample {
+
     public static int binarySearch(int arr[], int item) {
 
         int low = 0, high = arr.length - 1;

@@ -177,7 +177,7 @@ public class BinaryTree {
         binaryTree.root.right.left = new Node(15);
         binaryTree.root.right.right = new Node(8);
         binaryTree.insert(12);
-        binaryTree.rightView();
+        binaryTree.verticalTraversal();
     }
 
 }

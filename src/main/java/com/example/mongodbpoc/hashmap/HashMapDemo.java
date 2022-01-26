@@ -25,7 +25,8 @@ public class HashMapDemo {
         employee2.setName("Sachin");
         employee2.setDateOfBirth(new Date(1987, 2, 1));
         employee2.setSalary(new BigDecimal(100000));
-        map.put(employee2, "India");
+
+        //map.put(employee2, "India");
 
 
         map.put(employee1, "India");
@@ -33,10 +34,10 @@ public class HashMapDemo {
 //        System.out.println(employee1.hashCode());
 //        System.out.println(employee2.hashCode());
         System.out.println(map.size());
-        employee1.setId(2);
-        employee1.setName("test");
-        employee1.setDateOfBirth(new Date(1988, 2, 1));
-        employee1.setSalary(new BigDecimal(10000));
+//        employee2.setId(2);
+ //       employee1.setName("test");
+   //     employee1.setDateOfBirth(new Date(1988, 2, 1));
+     //   employee1.setSalary(new BigDecimal(10000));
         System.out.println(map.get(employee1));
 
         System.out.println(map.get(employee2));

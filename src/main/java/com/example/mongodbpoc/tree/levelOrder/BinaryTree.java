@@ -297,8 +297,8 @@ public class BinaryTree {
         binaryTree.root.right.left = new Node(15);
         binaryTree.root.right.right = new Node(8);
 //        binaryTree.root.left.left.left = new Node(90);
-        binaryTree.insert(12);
-        binaryTree.widthOfBinaryTree();
+      //  binaryTree.insert(12);
+        binaryTree.reverseLevelOrderTraversalFromRight();
     }
 
 }

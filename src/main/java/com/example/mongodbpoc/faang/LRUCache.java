@@ -25,7 +25,7 @@ public class LRUCache {
     }
 
     public static void main(String[] args) {
-        LRUCache cache = new LRUCache(2);
+        LRUCache cache = new LRUCache(3);
         cache.set("1", "10");
         cache.set("2", "20");
         cache.set("3", "30");
